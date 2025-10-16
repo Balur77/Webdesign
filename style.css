@@ -1,0 +1,155 @@
+/* 1. Общие базовые стили */
+* {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Фон всей страницы */
+body {
+  background: linear-gradient(135deg, #f0f0f0, #dcdcdc);
+  color: #222;
+  padding: 20px;
+}
+
+/* Центрируем контент и задаем макет */
+header, .content, .sidebar, footer {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 2. Заголовки */
+h1 {
+  color: red;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: orange;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: pink;
+  margin-bottom: 10px;
+}
+
+/* 3. Навигация */
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.link {
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.special-link {
+  color: blue;
+}
+
+.nav-list li:nth-child(3) a {
+  color: yellow;
+}
+
+.link:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* 4. Контент */
+.post {
+  margin-bottom: 20px;
+}
+
+#first-post p {
+  color: orange;
+}
+
+.content .post:nth-child(2) p {
+  color: purple;
+}
+
+/* 5. Сайдбар */
+ul.color-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.color-list li {
+  font-weight: bold;
+  color: gray;
+  padding: 5px 0;
+}
+
+ul.color-list li:nth-child(2) {
+  color: brown;
+}
+
+.highlighted {
+  color: black;
+}
+
+.widget + .important-widget .note {
+  color: #800000;
+  font-weight: bold;
+}
+
+/* 6. Форма */
+input[placeholder="Белый"] {
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+}
+
+button[type="submit"] {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+/* 7. Дополнительные украшения */
+p::before {
+  content: "▶ ";
+  color: gray;
+}
+
+footer {
+  text-align: center;
+}
+
+footer label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+footer label + input {
+  margin-bottom: 10px;
+}
