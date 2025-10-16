@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Сравнение Mercedes</title>
+  <style>
+    body {
+      background: #121212;
+      color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      background: #444;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #777;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    details {
+      background: #1c1c1c;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #2c2c2c;
+    }
+
+    summary {
+      cursor: pointer;
+      font-size: 1.4rem;
+      font-weight: bold;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    img {
+      display: block;
+      margin: 15px auto;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #444;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    tr:nth-child(even) {
+      background-color: #2a2a2a;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #222;
+    }
+
+    tr:hover {
+      background-color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Сравнение Mercedes C, E и S-Class</h1>
+    <nav>
+      <a href="#cclass">C-Class W205</a>
+      <a href="#eclass">E-Class W213</a>
+      <a href="#sclass">S-Class W222</a>
+    </nav>
+  </header>
+
+  <main>
+    <details id="cclass">
+      <summary>Mercedes-Benz C-Class (W205)</summary>
+      <img src="cc.jpg" alt="C-Class W205">
+      <table>
+        <tr><th>Характеристика</th><th>Значение</th></tr>
+        <tr><td>Годы выпуска</td><td>2014–2021</td></tr>
+        <tr><td>Двигатель</td><td>2.0 л Turbo (C300)</td></tr>
+        <tr><td>Мощность</td><td>245 л.с.</td></tr>
+        <tr><td>Разгон 0–100 км/ч</td><td>6.0 с</td></tr>
+        <tr><td>Макс. скорость</td><td>250 км/ч</td></tr>
+        <tr><td>Начальная цена</td><td>от $42 000</td></tr>
+        <tr><td>Привод</td><td>Задний / 4MATIC</td></tr>
+        <tr><td>Wi-Fi / Bluetooth</td><td>Bluetooth, Wi-Fi опция</td></tr>
+        <tr><td>Тормозная система</td><td>Дисковые по кругу</td></tr>
+        <tr><td>Системы предотвращения столкновений</td><td>Collision Prevention Assist</td></tr>
+      </table>
+    </details>
+
+    <details id="eclass">
+      <summary>Mercedes-Benz E-Class (W213)</summary>
+      <img src="ec.jpg" alt="E-Class W213">
+      <table>
+        <tr><th>Характеристика</th><th>Значение</th></tr>
+        <tr><td>Годы выпуска</td><td>2016–2023</td></tr>
+        <tr><td>Двигатель</td><td>2.0 л Turbo (E300)</td></tr>
+        <tr><td>Мощность</td><td>258 л.с.</td></tr>
+        <tr><td>Разгон 0–100 км/ч</td><td>6.2 с</td></tr>
+        <tr><td>Макс. скорость</td><td>250 км/ч</td></tr>
+        <tr><td>Начальная цена</td><td>от $55 000</td></tr>
+        <tr><td>Привод</td><td>Задний / 4MATIC</td></tr>
+        <tr><td>Wi-Fi / Bluetooth</td><td>Bluetooth, Wi-Fi</td></tr>
+        <tr><td>Тормозная система</td><td>Дисковые вентилируемые</td></tr>
+        <tr><td>Системы предотвращения столкновений</td><td>Active Brake Assist</td></tr>
+      </table>
+    </details>
+
+    <details id="sclass">
+      <summary>Mercedes-Benz S-Class (W222)</summary>
+      <img src="sc.jpg" alt="S-Class W222">
+      <table>
+        <tr><th>Характеристика</th><th>Значение</th></tr>
+        <tr><td>Годы выпуска</td><td>2013–2020</td></tr>
+        <tr><td>Двигатель</td><td>3.0 л V6 Biturbo (S450)</td></tr>
+        <tr><td>Мощность</td><td>367 л.с.</td></tr>
+        <tr><td>Разгон 0–100 км/ч</td><td>5.1 с</td></tr>
+        <tr><td>Макс. скорость</td><td>250 км/ч (огранич.)</td></tr>
+        <tr><td>Начальная цена</td><td>от $95 000</td></tr>
+        <tr><td>Привод</td><td>4MATIC</td></tr>
+        <tr><td>Wi-Fi / Bluetooth</td><td>Bluetooth, Wi-Fi встроен</td></tr>
+        <tr><td>Тормозная система</td><td>Перфорированные дисковые</td></tr>
+        <tr><td>Системы предотвращения столкновений</td><td>DISTRONIC + PRE-SAFE</td></tr>
+      </table>
+    </details>
+  </main>
+
+  <footer>
+    © 2025 Сравнение Mercedes — Стиль и мощь 🖤
+  </footer>
+</body>
+</html>

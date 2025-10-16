@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Сравнение автомобилей</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f8f8f8;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: #fff;
+      margin-bottom: 40px;
+      transition: 0.3s;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 10px;
+      text-align: center;
+    }
+    caption {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    thead {
+      background-color: #f0f0f0;
+    }
+    tfoot {
+      background-color: #f9f9f9;
+      font-style: italic;
+    }
+    details {
+      margin-top: 20px;
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    details:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    summary {
+      font-size: 1.3em;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Основная таблица -->
+  <table>
+    <caption>Сравнение автомобилей: BMW M4, Audi RS6 Avant, Mercedes-AMG E 63</caption>
+
+    <thead>
+      <tr>
+        <th>Характеристика</th>
+        <th>BMW M4</th>
+        <th>Audi RS6 Avant</th>
+        <th>Mercedes-AMG E 63</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Самая дорогая модель</td>
+        <td>M4 Competition xDrive</td>
+        <td>RS6 Performance</td>
+        <td>E 63 S 4MATIC+</td>
+      </tr>
+      <tr>
+        <td>Самая доступная модель</td>
+        <td>M4 Coupe</td>
+        <td>RS6 Avant Base</td>
+        <td>E 63 Base</td>
+      </tr>
+      <tr>
+        <td>Двигатель</td>
+        <td>3.0 л R6 Twin Turbo</td>
+        <td>4.0 л V8 Twin Turbo</td>
+        <td>4.0 л V8 Biturbo</td>
+      </tr>
+      <tr>
+        <td>Расход топлива</td>
+        <td>10.2 л/100 км</td>
+        <td>12.0 л/100 км</td>
+        <td>11.8 л/100 км</td>
+      </tr>
+      <tr>
+        <td>Разгон (0–100 км/ч)</td>
+        <td>3.5 сек</td>
+        <td>3.4 сек</td>
+        <td>3.4 сек</td>
+      </tr>
+      <tr>
+        <td>Экологические сертификаты</td>
+        <td>EURO 6d</td>
+        <td>EURO 6</td>
+        <td>EURO 6</td>
+      </tr>
+      <tr>
+        <td>Гарантийный срок</td>
+        <td>3 года</td>
+        <td>3 года</td>
+        <td>3 года</td>
+      </tr>
+      <tr>
+        <td>Максимальная скорость</td>
+        <td>290 км/ч</td>
+        <td>305 км/ч</td>
+        <td>300 км/ч</td>
+      </tr>
+      <tr>
+        <td>Тип трансмиссии</td>
+        <td>Автоматическая</td>
+        <td>Автоматическая</td>
+        <td>Автоматическая</td>
+      </tr>
+      <tr>
+        <td>Количество передач</td>
+        <td>8</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="4">* Данные актуальны на 2025 год</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- Дополнительная информация — интерактив через details -->
+  <details>
+    <summary>BMW M4 — Подробнее</summary>
+    <p>Купе класса high-performance. Легендарный рядный 6-цилиндровый двигатель, полный привод xDrive и агрессивный стиль. М4 — чистая динамика.</p>
+    <img src="bmw_m4.jpg" alt="BMW M4">
+    <h4>Особенности:</h4>
+    <ul>
+      <li>Мощность: 510 л.с.</li>
+      <li>Крутящий момент: 650 Н·м</li>
+      <li>Тормоза M Carbon Ceramic</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Audi RS6 Avant — Подробнее</summary>
+    <p>Семейный спорткар с душой суперкара. Универсал с V8 Twin Turbo, культовый Quattro и салон бизнес-класса.</p>
+    <img src="audi_rs6.jpg" alt="Audi RS6 Avant">
+    <h4>Особенности:</h4>
+    <ul>
+      <li>Мощность: 630 л.с.</li>
+      <li>Крутящий момент: 850 Н·м</li>
+      <li>Система полного привода Quattro</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Mercedes-AMG E 63 — Подробнее</summary>
+    <p>Брутальный представитель бизнес-класса с мощью суперкара. Уникальный баланс комфорта и звериной динамики.</p>
+    <img src="amg_e63.jpg" alt="Mercedes-AMG E 63">
+    <h4>Особенности:</h4>
+    <ul>
+      <li>Мощность: 612 л.с.</li>
+      <li>Крутящий момент: 850 Н·м</li>
+      <li>AMG Performance 4MATIC+</li>
+    </ul>
+  </details>
+
+</body>
+</html>
