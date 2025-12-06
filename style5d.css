@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1e1e1e);
+  color: #fff;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px;
+  min-height: 100vh;
+}
+
+.content {
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 14px 28px;
+  background: #ff6b00;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background: #ff8533;
+  transform: translateY(-3px);
+}
+
+.resume-btn {
+  background: transparent;
+  border: 2px solid #ff6b00;
+}
+
+.resume-btn:hover {
+  background: #ff6b00;
+}
+
+.image img {
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 107, 0, 0.4);
+}
+
+.hero-image {
+  max-width: 600px;
+  margin-top: 50px;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Шапка */
+.main-header {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-bar a:hover {
+  color: #ffcc00;
+}
+
+/* Футер */
+.main-footer {
+  background: linear-gradient(135deg, #0f0f0f, #1e1e1e);
+  padding: 30px;
+  text-align: center;
+  color: #ccc;
+  margin-top: 60px;
+}
+
+.main-footer p {
+  margin: 5px 0;
+}
+
+.socials {
+  margin-top: 10px;
+}
+
+.socials a {
+  color: #ffcc00;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #ffaa00;
+}
+/* ===========================
+   СЕКЦИЯ 2 — МОИ ДОСТИЖЕНИЯ (В ЧЁРНОМ СТИЛЕ)
+=========================== */
+
+.achievements {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1e1e1e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.achievements-container {
+  max-width: 1240px;
+  width: 100%;
+}
+
+.achievements-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #fff;
+}
+
+.achievements-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.achievement-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255,107,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(255,107,0,0.35);
+}
+
+.achievement-card img {
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+.achievement-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.achievement-card p {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* 🔥 КНОПКА "ПОДРОБНЕЕ" */
+.more-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 20px;
+  background: transparent;
+  color: #ff6b00;
+  border: 2px solid #ff6b00;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.more-btn:hover {
+  background: #ff6b00;
+  color: #000;
+}
+
+/* ✅ АДАПТИВ */
+@media (max-width: 900px) {
+  .achievements-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .achievement-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .achievements-title {
+    font-size: 32px;
+  }
+}
