@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа</title>
+</head>
+<body>
+    <h1>Проверка функций   </h1>
+    <script src="lab7.js"></script>
+    <h2>Контрольные вопросы</h2>
+    <h3>Числа</h3>
+    <p><b>Вопрос:</b> Как проверить, является ли число целым, и какие методы JavaScript можно использовать для этой проверки?</p>
+    <p><b>Ответ:</b> Можно использовать <code>Number.isInteger(num)</code>, который возвращает true, если число целое. Также можно проверить через <code>num % 1 === 0</code>.</p>
+
+    <h3>Строки</h3>
+    <p><b>Вопрос:</b> Как извлечь подстроку из строки, начиная с определённой позиции и заданной длины?</p>
+    <p><b>Ответ:</b> Для этого используют метод <code>substr</code> или <code>substring</code>. Пример:</p>
+    <pre><code>function getSubstring(str, start, length) {
+    return str.substr(start, length);
+}
+console.log(getSubstring("Hello World", 0, 5)); // "Hello"
+</code></pre>
+
+    <h3>Булевы значения</h3>
+    <p><b>Вопрос:</b> Что такое операция "исключающее ИЛИ" (XOR), и как она может быть реализована для двух булевых значений?</p>
+    <p><b>Ответ:</b> XOR возвращает true, если значения разные. В JavaScript можно реализовать так:</p>
+    <pre><code>function xor(a, b) {
+    return (a || b) && !(a && b);
+}
+console.log(xor(true, false)); // true
+console.log(xor(true, true));  // false
+</code></pre>
+
+    <h3>Объекты</h3>
+    <p><b>Вопрос:</b> Как проверить, содержит ли объект определённое свойство, и в чём разница между использованием <code>in</code> и <code>hasOwnProperty</code>?</p>
+    <p><b>Ответ:</b> 
+        - Оператор <code>in</code> проверяет наличие свойства в объекте и его прототипах.<br>
+        - Метод <code>hasOwnProperty</code> проверяет только собственные свойства объекта.
+    </p>
+
+    <h3>Массивы и их обработка</h3>
+    <p><b>Вопрос:</b> Чем отличаются методы <code>forEach</code> и <code>map</code> при работе с массивами?</p>
+    <p><b>Ответ:</b> 
+        - <code>forEach</code> выполняет действие для каждого элемента массива, но не возвращает новый массив.<br>
+        - <code>map</code> создаёт новый массив, преобразуя каждый элемент по заданной функции.
+    </p>
+    <pre><code>const arr = [1, 2, 3];
+arr.forEach(x => console.log(x * 2)); // выводит 2, 4, 6
+
+const doubled = arr.map(x => x * 2);
+console.log(doubled); // [2, 4, 6]
+</code></pre>
+</body>
+</html>
