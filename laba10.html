@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лабораторная №10 — jQuery</title>
+  <!-- Подключаем jQuery (CDN) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    ul { list-style-type: none; padding: 0; margin: 10px 0; }
+    li { padding: 6px 8px; border: 1px solid #eee; }
+    .gray { background-color: #ddd; }
+    .white { background-color: #fff; }
+    .error { border: 2px solid red; }
+    #greeting { margin-top: 10px; font-weight: bold; }
+    button { cursor: pointer; }
+    label { display: inline-block; width: 80px; }
+    input { padding: 6px; }
+  </style>
+</head>
+<body>
+  <h1 id="page-title">Список дел</h1>
+
+  <ul id="todo-list">
+    <li>Сделать лабораторную</li>
+    <li>Повторить теорию</li>
+    <li>Отдохнуть</li>
+  </ul>
+
+  <button id="action-btn">Выполнить действия</button>
+
+  <hr>
+
+  <form id="my-form">
+    <p><label for="name">Имя:</label><input type="text" id="name" placeholder="Введите имя"></p>
+    <p><label for="password">Пароль:</label><input type="password" id="password" placeholder="Введите пароль"></p>
+    <button type="submit">Отправить</button>
+  </form>
+
+  <div id="greeting"></div>
+
+  <script>
+    // Задание 1: селекторы и манипуляции
+    $("#action-btn").on("click", function() {
+      // 1) Изменяем текст заголовка страницы
+      $("#page-title").text("Обновленный список дел");
+
+      // 2) Красим четные/нечетные элементы списка
+      $("#todo-list li").removeClass("gray white"); // очищаем на всякий случай
+      $("#todo-list li:even").addClass("gray"); // четные по индексу: 0,2,4,...
+      $("#todo-list li:odd").addClass("white"); // нечетные: 1,3,5,...
+
+      // 3) Добавляем новый элемент в конец списка
+      $("#todo-list").append("<li>Изучить jQuery</li>");
+    });
+
+    // Задание 2: события и формы
+    $("#name").on("blur", function() {
+      const value = $(this).val().trim();
+      if (value === "") {
+        $(this).addClass("error");
+      } else {
+        $(this).removeClass("error");
+      }
+    });
+
+    $("#my-form").on("submit", function(event) {
+      event.preventDefault(); // не перезагружаем страницу
+      const name = $("#name").val().trim();
+      if (name) {
+        $("#greeting").text("Привет, " + name + "!");
+      } else {
+        $("#greeting").text("Введите имя!");
+        $("#name").addClass("error").focus();
+      }
+    });
+  </script>
+</body>
+</html>
